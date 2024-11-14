@@ -1,15 +1,9 @@
+import 'package:demo_app_1/image_changer.dart';
 import 'package:demo_app_1/text_styling.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  HomePage({super.key});
-
-  var activeImage = 'assets/images/arsenal.jpeg';
-
-  void rollDice() {
-    activeImage = 'assets/images/mancity.jpeg';
-    print("yOO");
-  }
+  const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,28 +18,7 @@ class HomePage extends StatelessWidget {
           ),
         ),
         child: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Container(
-                child: Image.asset(
-                  activeImage,
-                  width: 150,
-                  height: 150,
-                ),
-              ),
-              TextButton(
-                onPressed: rollDice,
-                style: TextButton.styleFrom(
-                    padding: const EdgeInsets.only(
-                      top: 20,
-                    ),
-                    foregroundColor: Colors.black,
-                    textStyle: const TextStyle(fontSize: 20)),
-                child: const Text("Click to Change Team"),
-              )
-            ],
-          ),
+          child: ImageChanger(),
         ),
       ),
     );
