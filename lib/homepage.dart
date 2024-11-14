@@ -2,10 +2,13 @@ import 'package:demo_app_1/text_styling.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
-  const HomePage({super.key});
+  HomePage({super.key});
+
+  var activeImage = 'assets/images/arsenal.jpeg';
 
   void rollDice() {
-    //
+    activeImage = 'assets/images/mancity.jpeg';
+    print("yOO");
   }
 
   @override
@@ -21,28 +24,29 @@ class HomePage extends StatelessWidget {
           ),
         ),
         child: Center(
-            child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Container(
-              child: Image.asset(
-                "assets/images/arsenal.jpeg",
-                width: 150,
-                height: 150,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                child: Image.asset(
+                  activeImage,
+                  width: 150,
+                  height: 150,
+                ),
               ),
-            ),
-            TextButton(
-              onPressed: rollDice,
-              style: TextButton.styleFrom(
-                  padding: const EdgeInsets.only(
-                    top: 20,
-                  ),
-                  foregroundColor: Colors.black,
-                  textStyle: const TextStyle(fontSize: 20)),
-              child: const Text("Click to Change Team"),
-            )
-          ],
-        )),
+              TextButton(
+                onPressed: rollDice,
+                style: TextButton.styleFrom(
+                    padding: const EdgeInsets.only(
+                      top: 20,
+                    ),
+                    foregroundColor: Colors.black,
+                    textStyle: const TextStyle(fontSize: 20)),
+                child: const Text("Click to Change Team"),
+              )
+            ],
+          ),
+        ),
       ),
     );
   }
