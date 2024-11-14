@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'dart:math';
+//import 'dart:math';
 
 class ImageChanger extends StatefulWidget {
   const ImageChanger({super.key});
@@ -14,9 +14,9 @@ class _ImageChangerState extends State<ImageChanger> {
   var activeImage = 'assets/images/image_1.jpeg';
 
   void rollDice() {
-    var imageRoll = Random().nextInt(5) + 1;
+    //var imageRoll = Random().nextInt(2) + 1;
     setState(() {
-      activeImage = 'assets/images/image_2.jpeg';
+      activeImage = 'assets/images/image_4.jpeg';
     });
   }
 
