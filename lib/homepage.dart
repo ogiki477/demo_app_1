@@ -17,7 +17,7 @@ class HomePage extends StatelessWidget {
             colors: [Colors.green, Colors.white],
           ),
         ),
-        child: Center(
+        child: const Center(
           child: ImageChanger(),
         ),
       ),
